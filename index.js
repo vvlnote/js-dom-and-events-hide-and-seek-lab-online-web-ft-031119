@@ -16,13 +16,15 @@ function increaseRankBy(n) {
 
 function deepestChild() {
   let node = document.querySelector('div#grand-node');
-  let count = 0;
-  return function lastestChild(node) {
+  let latestNode = null;
+  function lastestChild(node) {
     console.log(`${count ++}`);
     let childCount = node.childElementCound();
     if (childCount == 0) {
-      return node;
+      latestNode = node;
+      return;
     }
     lastestChild(node.firstElementChild());
   }
+  return latestNode;
 }
