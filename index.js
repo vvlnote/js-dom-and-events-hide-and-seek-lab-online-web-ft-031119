@@ -25,7 +25,7 @@ function deepestChild() {
       latestNode = node;
       return;
     }
-    lastestChild(node.firstElementChild());
+    lastestChild(node.firstElementChild;
   }
   return latestNode;
 }
