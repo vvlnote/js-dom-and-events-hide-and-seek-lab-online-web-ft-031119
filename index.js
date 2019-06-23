@@ -16,8 +16,9 @@ function increaseRankBy(n) {
 
 function deepestChild() {
   let node = document.querySelector('div#grand-node');
-  console.log(node);
+  let count = 0;
   let latestNode = function lastestChild(node) {
+    console.log(`${count ++}`);
     let childNode = node.firstElementChild();
     if (childNode == null) {
       return node;
