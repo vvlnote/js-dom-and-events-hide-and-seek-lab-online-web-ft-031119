@@ -19,11 +19,11 @@ function deepestChild() {
   let count = 0;
   let latestNode = function lastestChild(node) {
     console.log(`${count ++}`);
-    let childNode = node.firstElementChild();
-    if (childNode == null) {
+    let childCount = node.childElementCound();
+    if (childCount == 0) {
       return node;
     }
-    lastestChild(childNode);
+    lastestChild(node.firstElementChild());
   }
   return latestNode;
 
